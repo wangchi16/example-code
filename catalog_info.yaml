@@ -1,5 +1,5 @@
 apiVersion: azure.com/v2
-kind: Source
+kind: Component
 metadata:
   name: example-code
   description: a source code from github
@@ -7,14 +7,4 @@ spec:
   type: code
   owner: guest
   url: https://github.com/wangchi16/example-code/
-
----
-apiVersion: azure.com/v2
-kind: Source
-metadata:
-  name: example-code-1
-  description: a source code from github
-spec:
-  type: code
-  owner: guest
-  url: https://github.com/wangchi16/example-code/
+  lifecycle: experimental
