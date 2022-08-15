@@ -4,7 +4,7 @@ metadata:
   name: example-code
   description: a source code from github
 spec:
-  type: code
-  owner: guest
+  type: service
+  owner: azure
   url: https://github.com/wangchi16/example-code/
   lifecycle: experimental
