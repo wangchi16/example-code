@@ -1,10 +1,71 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-code
-  description: a source code from github
+  name: example-application
+  description: an example source code
+  tags: ['app']
 spec:
   type: service
-  owner: azure
-  url: https://github.com/wangchi16/example-code/
+  owner: guest
+  url: https://github.com/backstage/backstage/blob/master
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-application1
+  description: an example source code
+  tags: ['app']
+spec:
+  type: service
+  owner: guest
+  url: https://github.com/backstage/backstage/blob/master
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-application2
+  description: an example source code
+  tags: ['app']
+spec:
+  type: service
+  owner: guest
+  url: https://github.com/backstage/backstage/blob/master
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: devopsService
+  annotations:
+    dev.azure.com/project-repo: One/ServiceLinker
+spec:
+  type: service
+  lifecycle: experimental
+  owner: azure
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: azure-vote
+  annotations:
+    'backstage.io/kubernetes-id': azure-vote
+    # 'backstage.io/kubernetes-namespace': default
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dice-roller
+  annotations:
+    'backstage.io/kubernetes-id': dice-roller
+    # 'backstage.io/kubernetes-namespace': default
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
